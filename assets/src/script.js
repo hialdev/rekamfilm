@@ -147,6 +147,49 @@ com.owlCarousel({
     }
 });
 
+//--------------------- Our work Page
+//Upcoming Work
+var ourwork = $('.nextwork-page');
+ourwork.owlCarousel({
+    margin:10,
+    nav:true,
+    loop:true,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+
+//------ Work Detail
+var trailerr = $('.trailer-item');
+trailerr.owlCarousel({
+    margin:10,
+    autoWidth:false,
+    loop:false,
+    dots:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+});
+//------ end Work Detail
+//--------------------- end Our Work
+
 //--------------------- Community Page
 //com-toggle for show explain
 
@@ -166,3 +209,8 @@ ctgl.each(function (i){
     }
 });
 //--------------------- end Community Page
+
+
+//--------------------- News Page
+
+//--------------------- end News page

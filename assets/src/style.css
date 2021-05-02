@@ -49,6 +49,19 @@ body{
 section{
     overflow:hidden ;
 }
+.active{
+    color: var(--yellow);
+}
+.active:before{
+    content: '';
+    position: absolute;
+    bottom:-10px;
+    margin-left: 1px;
+    height: 3px;
+    width: 2em;
+    border-radius: var(--radius);
+    background-color: var(--yellow);
+}
 /* end Utilities 
 ------------------- */
 
@@ -78,10 +91,9 @@ button{
     cursor: pointer;
     font-weight: bold;
 }
-* a{
+a{
     text-decoration: none;
     color: var(--light);
-    font-weight:600;
 }
 .btn-prm{
     background-color: var(--yellow);
@@ -118,8 +130,9 @@ button{
 
 .section-page{
     padding: 5em var(--side);
-    padding-top: 10em;
-    background-color: var(--darken);
+    padding-top: 10em !important;
+    background:linear-gradient(180deg, rgba(4, 5, 62, 0.9) 0%, rgba(4, 5, 62, 0.9) 100%),url('../img/news (2).jpg');
+    background-size: cover;
 }
 
 .divider{
@@ -170,6 +183,9 @@ img.logo{
     text-decoration: none;
     text-transform: uppercase;
     margin: 1em;
+}
+.header ul li a:hover{
+    color: var(--yellow);
 }
 /* menu-toggle */
 .menu-toggle{
@@ -371,20 +387,20 @@ a.more{
 .prevwork-slide{
     padding-left: var(--side);
 }
-.prevwork-item{
+.work-item{
     position: relative;
     width:100%;
     height: 45em;
     border-radius: var(--radius);
     overflow: hidden;
 }
-.prevwork-item>img{
+.work-item>img{
     width: 100%;
     height: 45em;
     object-fit: cover;
     object-position: top;
 }
-.prevwork-item:hover .prevwork-content{
+.work-item:hover .prevwork-content{
     opacity: 1;
     transition: all 300ms ease-in-out;
     cursor: pointer;
@@ -555,6 +571,7 @@ a.more{
 .contact>img{
     position: absolute;
     bottom: -5px;
+    width: 100%;
 }
 .contact-box{
     display: flex;
@@ -749,7 +766,151 @@ end Home Section */
 }
 /* -------------------------------- end About Us */
 
+/* -------------------------------- OUR Work Page */
+.nextwork-page .work-item>img{
+    filter: grayscale(100%);
+}
+.prevwork-page{
+    display: flex;
+    flex-wrap: wrap;
+}
+.prevwork-page .work-item{
+    margin: 1em;
+    flex: 0 0 30%;
+}
 
+/* ------ Work Detail */
+.work-detail a.back:hover{
+    text-decoration: underline;
+}
+.back{
+    display: flex;
+    align-items: center;
+}
+.back .iconify{
+    font-size: 20px;
+    margin-right: 0.5em;
+}
+.detail-box{
+    display: flex;
+    align-items: center;
+}
+.detail-box .detail-content{
+    padding: 3em;
+}
+.trailer-box{
+    padding: 5em var(--side);
+}
+.trailer-box .trailer-item{
+    margin: 2em 0px;
+}
+.trailer-box .trailer-item iframe{
+    border-radius: var(--radius);
+    width: 100%;
+    height: 25em;
+}
+.festival-news{
+    margin-left: 1em;
+}
+.festival-news li a:hover{
+    text-decoration: underline;
+}
+.work-gallery{
+    padding: 3em var(--side);
+    background-color: var(--darken);
+}
+.gallery-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em 0px;
+}
+.gallery-box>img{
+    max-width: 25%;
+    border: 1px solid var(--light);
+    margin: 0em;
+}
+  
+/* ------ end Work Detail */
+/* -------------------------------- end Our Work */
+
+
+/* -------------------------------- News */
+.section-page>.subscribe{
+    max-width: 50em;
+    margin: auto;
+}
+.form-search{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+    position: relative;
+}
+
+.form-search input{
+    width: 60%;
+    box-sizing: border-box;
+    border-bottom-left-radius: var(--radius);
+    border-top-left-radius: var(--radius);
+    background-color:  #ffffff;
+    box-shadow: 1px var(--radius) 4px 0 rgba(0, 0, 0, 0.08);
+    padding:1em 1.5em;
+    border: 1px solid #b6c3cd;;
+    border-right: 0;
+    color:var(--darken);
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.form-search button{
+    border-radius: 0px;
+    border-bottom-right-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    background-color:  var(--yellow);
+    color: var(--light);
+    padding: 1.06em;
+    margin-left: -4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.form-search button .iconify{
+    font-size: 22px;
+    margin-bottom: -0.3em;
+}
+
+.news-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.news-page .news-items{
+    margin: 1em;
+}
+/* -------------------------------- end News */
+
+/* -------------------------------- Contact Page */
+.contact-page .contact-form h2, .contact-page p{
+    color: var(--light);
+}
+.contact-box{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+}
+.contact-box .contact-icon{
+    padding: 2em;
+    flex: 0 0 30%;
+    border:2px solid var(--light);
+    text-align: center;
+    border-radius: var(--radius);
+    margin: 0.5em 0px;
+}
+.contact-box .contact-icon .iconify{
+    font-size: 40px;
+}
+/* -------------------------------- end Contact Page */
 
 /* ----------------------- Responsive */
 
@@ -767,7 +928,8 @@ end Home Section */
 
     /* Components */
     .section-page{
-        padding-top: 7em;
+        padding-top: 7em !important;
+        
     }
 
     /* Header */
@@ -877,7 +1039,49 @@ end Home Section */
         text-align: justify;
     }
     /* ------------ end About us page */
+
+    /* -------------------------------- OUR Work Page */
+    .prevwork-page{
+        margin: 2em var(--side);
+    }
+    .prevwork-page .work-item{
+        margin: 0.3em;
+        flex: 0 0 48%;
+    }
+    /* -------- Work Detail */
+    .detail-box{
+        flex-direction: column;
+    }
+    .detail-box .detail-content{
+        padding: 0em;
+        margin-top: 4em;
+    }
+    .gallery-box>img{
+        max-width: 33%;
+    }
+    /* -------- end Work Detail */
+    /* -------------------------------- end Our Work */
 }
 /* -------- end Small */
 
+@media only screen and (max-width:540px){
+    /* -------------------------------- OUR Work Page */
+    .prevwork-page{
+        flex-direction: column;
+    }
+    .prevwork-page .work-item{
+        margin: 0em;
+        flex: 0 0 100%;
+    }
+    
+    .trailer-box .trailer-item iframe{
+        height: 20em;
+    }
+    .gallery-box>img{
+        max-width: 50%;
+    }
+    /* -------------------------------- end Our Work */
+    
+
+}
 /* ----------------------- end Responsive */
