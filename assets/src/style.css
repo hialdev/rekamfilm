@@ -888,6 +888,44 @@ end Home Section */
 .news-page .news-items{
     margin: 1em;
 }
+
+/* ----------------- News Item */
+.hero-news{
+    background:linear-gradient(180deg, rgba(4, 5, 62, 0.377) 0%, rgba(4, 5, 62, 0.548) 100%),url('../img/prev-work (1).jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.article{
+    background-color: var(--darken);
+    padding: 3em 0px;
+}
+.article-box{
+    width: 100%;
+    padding:var(--side);
+    max-width: 60em;
+    margin: 3em auto;
+    margin-top: 4em;
+    background-color:var(--blue);
+    border-radius: var(--radius);
+}
+.article-box h2{
+    margin-top: 1.5em;
+}
+.article-box img{
+    border-radius: var(--radius);
+    border: 2px solid var(--light);
+    width: 100%;
+    max-width: 40em;
+    margin: 1em auto;
+    filter: grayscale(100%);
+}
+.article-box img:hover{
+    filter: grayscale(0);
+}
+.news-more{
+    padding: 5em var(--side);
+}
+/* ----------------- end News */
 /* -------------------------------- end News */
 
 /* -------------------------------- Contact Page */
@@ -1061,6 +1099,15 @@ end Home Section */
     }
     /* -------- end Work Detail */
     /* -------------------------------- end Our Work */
+
+    /* -------------------------------- News Page */
+    article.article{
+        padding: 0px;
+    }
+    .article .article-box{
+        margin-top: 1em;
+    }
+    /* -------------------------------- end News Page */
 }
 /* -------- end Small */
 
