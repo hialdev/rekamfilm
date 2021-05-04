@@ -459,6 +459,14 @@ a.more{
         margin: 2em 0px;
         flex-basis: 31.5%;
     }
+    .community-box.community-page{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .community-box.community-page .com-items{
+        flex: 0 0 46%;
+        margin:1em;
+    }
     .com-active>img{
         filter: none !important;
     }
@@ -1099,6 +1107,16 @@ end Home Section */
     }
     /* -------- end Work Detail */
     /* -------------------------------- end Our Work */
+
+    /* -------------------------------- Community Page */
+    .community-box.community-page{
+        flex-direction: column;
+    }
+    .community-box.community-page .com-items{
+        flex: 1;
+        margin:1em 0em;
+    }
+    /* -------------------------------- end Community Page */
 
     /* -------------------------------- News Page */
     article.article{

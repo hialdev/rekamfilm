@@ -201,7 +201,7 @@ ctgl.each(function (i){
     if (i <= ctgl.length){
         i++;
         $('.btn-tgl'+i).click(function(){
-            $('.com-exp'+i).toggle();
+            $('.com-explain.com-exp'+i).toggle();
             $('.btn-tgl'+i).toggleClass('com-active');
         });
     }else{
